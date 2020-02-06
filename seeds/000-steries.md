@@ -50,6 +50,6 @@
 ## Notes
 
 1. Difficulty: Lv2/5 (Beginner)
-1. Creator: [hidecharo](https://github.com/hidecharo) ([@hidecharo](https://twitter.com/hidecharo))
+1. Creator: [hidecharo](https://github.com/hidecharo) ([@hidecharo](https://twitter.com/hidecharo)) / LimitedAnswerTalker Lv0~4/5 (Expert)
 1. Time Taken: Over 20 Year (Over 15,000 Hour)
 1. Stery: Original word, "Mystery to My Stery" Created by Genius Lv5/unknown (Ultimate?)
