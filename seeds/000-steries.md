@@ -3,7 +3,7 @@
 
 ## Perfect Seed (Answer)
 
-- ?
+1. ?
 
 
 ## Perfect Steries (Questions) as of 20200206
@@ -28,7 +28,7 @@
     1. CI/CD
 
 
-## Hints: Required Skills
+## Hints: Required Skills as of 20200206
 
 1. English: Lv2/5 (Beginner)
 1. Lean Startup/MIT24: Lv3/5 (Advanced)
@@ -50,4 +50,6 @@
 ## Notes
 
 1. Difficulty: Lv2/5 (Beginner)
+1. Creator: [hidecharo](https://github.com/hidecharo) ([@hidecharo](https://twitter.com/hidecharo))
+1. Time Taken: Over 20 Year (Over 15,000 Hour)
 1. Stery: Original word, "Mystery to My Stery" Created by Genius Lv5/unknown (Ultimate?)
