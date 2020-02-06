@@ -30,12 +30,12 @@
 
 ## Hints: Required Skills
 
-1. English: Lv2 (Beginner)
-1. Lean Startup/MIT24: Lv3 (Advanced)
-1. Agile: Lv4 (Expert)
-1. People Management: Lv5 (Ultimate)
-1. Flutter/React Native/Elixir: Lv2 (Beginner)
-1. Programming: Lv4 (Expert)
+1. English: Lv2/5 (Beginner)
+1. Lean Startup/MIT24: Lv3/5 (Advanced)
+1. Agile: Lv4/5 (Expert)
+1. People Management: Lv5/5 (Ultimate)
+1. Flutter/React Native/Elixir: Lv2/5 (Beginner)
+1. Programming: Lv4/5 (Expert)
 
 
 ## Hints: Skill Levels
