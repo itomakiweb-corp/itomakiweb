@@ -19,13 +19,13 @@
 1. SoftwareEngineering
     1. GitHub/Twitter/Medium/YouTube
     1. TechFeedPro/Hatena/connpass/Quora
-    1. Dev/Design/Web/Universal
-    1. CI/CD
-    1. Firebase/Frontend/Flutter
-    1. Unity/Expo/ReactNative/Ionic
-    1. Elixir
-    1. Gatsby/Next/Nuxt/Angular/Kotlin/Swift
     1. Markdown/YAML
+    1. Dev/Design/Web/Universal
+    1. Firebase/Frontend/Flutter
+    1. Elixir
+    1. Unity/Expo/ReactNative/Ionic
+    1. Gatsby/Next/Nuxt/Angular/Kotlin/Swift
+    1. CI/CD
 
 
 ## Hints: Required Skills
