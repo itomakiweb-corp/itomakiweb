@@ -34,7 +34,7 @@
 1. Lean Startup/MIT24: Lv3 (Advanced)
 1. Agile: Lv4 (Expert)
 1. People Management: Lv5 (Ultimate)
-1. Flutter/ReactNative/Elixir: Lv2 (Beginner)
+1. Flutter/React Native/Elixir: Lv2 (Beginner)
 1. Programming: Lv4 (Expert)
 
 
