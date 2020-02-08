@@ -225,6 +225,50 @@ youtube、コメント時に、改行を複数挟むと、省略されてしま�
 
 
 
+https://wiki.archlinux.org/index.php/SSH_keys#SSH_agents
+
+begin-mi-smartband4
+power-under15%-mi-smartband4 at 
+
+npm install @org/foo --registry https://npm.pkg.github.com/org
+
+
+git clone https://github.com/flutter/flutter.git
+export PATH="$PATH:`pwd`/flutter/bin"
+
+Ctrl+[が使えないのが、地味に辛いかな。terminal only, can use vscode
+Ctrl+cで代用
+
+Chromebookに、
+安価というブランドイメージがついているのが、
+勿体なく感じるなあ。
+変化や先進的というブランドの方が、
+私にはしっくりきます。
+
+ハイエンドChromebookは、
+普通に開発や日常用途のメイン端末として使えます。
+
+MacBook ProやWindowsは、
+稀にしか使わなくなりました。
+
+1年を振り返る
+1年の目標を立てる
+今年の目標を立てるとか
+
+quest done
+https://github.com/itomakiweb-corp/bank/milestone/17?closed=1
+
+quest todo
+https://github.com/itomakiweb-corp/bank/milestone/19
+
+カタンをやる
+
+2/22（土）の予定を決める
+104-bankに、firestoreドキュメントを移動する
+
+hidecharoを追加する　bank, next
+
+
 
 
 
