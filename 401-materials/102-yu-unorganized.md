@@ -18,13 +18,18 @@
  - そしてpull requestというプロセス
  - これらを組み合わせると、ossコミュニティとの繋がっていく部分がある気がした
  - SNSという要素も重要？（いいね　という概念がヒントということから）
- - GithubにもGithub communityというものがあるが、、知識が足りない
+ - GitHubにもGitHub communityというものがあるが、、知識が足りない
  - itomakiwebのコアコンセプトもとても重要な要素な気がする
  - 一人で悩んでも仕方ないので、皆で頑張ろう
- - ソフトウェアは自由であるべき
+ - ソフトウェアは自由であるべき：GPLというossライセンス
  - 最先端のユニバーサルなプラットフォームとしてFlutterとReactNativeがあるが、開発元のPMFという観点からFlutterを選択する
  - 知の財産は共有するだけでなく、共有の手助けをする
- - それが可能なのがGithub
+ - それが可能なのがGitHub
+    - GitHubにはまだまだ自分の使っていない機能がある
+       - GitHub Actions: イベントのトリガーとアクションを組み合わせワークフローを自動化する
+       - LinuxやDockerなど知るべき要素が多くまだ難しい
+       - 少し横道にそれた
+ - PMFとは、データなどの可視化されている数値などではなく、ユーザーの反応などで自然とPMFであると感じられる”状態”を指す
 
  ### 参考リンク
 
@@ -33,4 +38,51 @@
  - [PMF: advance](https://note.com/kenichiro_hara/n/nec3b6d791039)
  - [スクラム開発](https://www.pastoraldog.com/THESCRUMPRIMER_ja.pdf)
  
+ ### 要素の再確認
  
+ 1. Comunity: English/Japanese
+    - 世界をターゲットに見据え、多言語対応を考える
+ 1. Growth
+    - 学び、そして教え、成長を促す、成長となる
+ 1. Product/Business
+    - パーフェクトシードの持つPMFが生み出す物？抽象すぎて難しい
+ 1. Lean Startup/MIT24
+    - スタートアップが成功するための思想、PMFを得ることがカギ
+ 1. MVP (Minimum Viable Product) + Early Adopters
+    - 最小規模のターゲットへの製品と、初期のマーケット
+    - まず成しえるべきPMFと言える
+ 1. Agile: Scrum/XP (Extreme Programming)/Management
+    - ソフトウェア開発の手法、抽象的な思想
+    - スクラムやXPはアジャイルを実現させる手段
+    - ヒデさんは経験からそれらにマネジメントという要素がマッチすると考えている？
+ 1. Experts/Begginers
+    - 上級者と初学者が同居、教え、学びにつながる、itomakiの状態でもある
+ 1. Education/Learning
+    - 学び、そして教える　重複とも言えるこの要素はそれだけ重要だと考えられる
+ 1. Web Development
+    1. GitHub/Twitter/Medium/YouTube
+    1. TechFeed Pro/Hatena/connpass/Quora
+    1. Markdown/YAML
+    1. Dev/Design/Web/Universal
+    1. Firebase/Frontend/Flutter
+    1. Elixir
+    1. Unity/Expo/React Native/Ionic
+    1. Gatsby/Next/Nuxt/Angular/Kotlin/Swift
+    1. CI/CD
+ 
+ ### 答えを考える
+ 
+ 予想されるアルファベット三文字\
+ 現時点ではoss、もしくはsns\
+ GitHubはその両方を兼ね備えているとも言えるかも\
+ スターやウォッチといった機能もあるし、コミュニティも存在する\
+ でも答えにはossのほうが近い気がする\
+ GitHubでのoss開発、oss活動を通して学び、質問し、教え、教えられ\
+ そして洗練されていくそのソフトウェア（もしくは洗練していく過程そのもの？）が原典となる\
+ そういったサイクルを繰り返していく事がwikiの再創造？\
+ そのサイクルをまずMVPとしてitomakiが行うことでPMFを得る\
+ うーん\
+ やはりまだ知識が足りないので答えとしては弱い気がします\
+ 以上の内容で、当たっている部分はどこか？\
+ また間違っている部分はどこか？\
+ 次に得るべき知識は何か？\
