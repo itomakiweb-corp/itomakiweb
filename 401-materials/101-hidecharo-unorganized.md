@@ -58,6 +58,8 @@ github actions, 権限のない人が、fileを作るとき、greetingsに失敗
 よいバランスが大事だよね
 ただ、どうの話をしらない　それによって、成長できるかもしれない
 しんかんけいのせつめい、うけたことあるか　べ、ない、かからは、不明
+かからは、ある　こからのしんはある　しのあとのへんかはある　きいたおぼあり　わすれた　だいじ
+ばろめたがわからん　このこからのしんらいのかくしん
 
 
 安達さん
@@ -65,6 +67,8 @@ github actions, 権限のない人が、fileを作るとき、greetingsに失敗
 
 
 github issueは、gplになるのか？
+You've removed 7 people from the organization. It may take a few minutes for the removal to process.
+
 
 Hide Charo (ひで) 😊
 Hide Charo (ひで)
