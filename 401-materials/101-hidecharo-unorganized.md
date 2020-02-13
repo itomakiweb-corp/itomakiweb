@@ -54,6 +54,12 @@ add 401-steries.md
 Status Reader Lv5/5 (Ultimate) Top
 
 
+quantum
+https://twitter.com/hidecharo/status/1227160088067989504?s=20
+https://twitter.com/hidecharo/status/1227160088067989504
+
+https://github.com/itomakiweb-corp/itomakiweb/blob/master/501-players/101-101-101-101-101-101-hidecharo.md
+
 Hi, I'm "Hide Charo (ひで) 😊" (@hidecharo).😀
 I started learning Flutter.😊
 I like Web, Chromebook, Android, iOS.😆
