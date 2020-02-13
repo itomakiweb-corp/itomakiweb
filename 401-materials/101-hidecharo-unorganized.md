@@ -75,8 +75,9 @@ github actions, 権限のない人が、fileを作るとき、greetingsに失敗
 そうた、
 ひろたか、だいにでは、ない　たいへんだったみたい　なにもしないから、かわった
 だいにはよい、ということ
-
-
+そう　じゅん　そのこをうわまわるなにか　信頼は難しい
+そうみさ、みさそう
+じんぶつそうかんず、やろう
 
 
 
@@ -92,7 +93,6 @@ github issueは、gplになるのか？
 You've removed 7 people from the organization. It may take a few minutes for the removal to process.
 
 
-Hide Charo (ひで) 😊
 Hide Charo (ひで)
 Hide
 hidecharo
