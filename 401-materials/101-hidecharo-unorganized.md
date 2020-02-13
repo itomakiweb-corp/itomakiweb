@@ -1,6 +1,9 @@
 update
 https://b.hatena.ne.jp/hidecharo/bookmark
 
+github actions, 権限のない人が、fileを作るとき、greetingsに失敗する模様
+まず、権限のある人が、ファイルを作る必要がある
+
 github issueは、gplになるのか？
 
 Hide Charo (ひで) 😊
