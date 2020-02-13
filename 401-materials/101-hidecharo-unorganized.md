@@ -1,3 +1,6 @@
+update
+https://b.hatena.ne.jp/hidecharo/bookmark
+
 github issueは、gplになるのか？
 
 Hide Charo (ひで) 😊
