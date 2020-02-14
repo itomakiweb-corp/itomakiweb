@@ -6,7 +6,7 @@
 1. ?
 
 
-## Perfect Steries (Questions) as of 20200206
+## Perfect Steries (Questions) as of 20200215
 
 1. Comunity: English/Japanese, Management
 1. Growth
@@ -28,12 +28,12 @@
     1. CI/CD
 
 
-## Hints: Required Skills as of 20200206
+## Hints: Required Skills as of 20200215
 
+1. People Management/Document Management: Lv9/5 (Creator)
 1. English: Lv2/5 (Beginner)
-1. Lean Startup/MIT24: Lv3/5 (Advanced)
-1. Agile: Lv4/5 (Expert)
-1. People Management: Lv5/5 (Ultimate)
+1. Lean Startup/MIT24: Lv3/5 (Ultimate)
+1. Agile: Lv8/5 (Seeder)
 1. Flutter/React Native/Elixir: Lv2/5 (Beginner)
 1. Programming: Lv4/5 (Expert)
 
@@ -45,6 +45,10 @@
 1. Lv3/5 (Advanced)
 1. Lv4/5 (Expert)
 1. Lv5/5 (Ultimate)
+1. Lv6/5 (Origin)
+1. Lv7/5 (Seeder)
+1. Lv8/5 (Namer)
+1. Lv9/5 (Re-Namer = Creator)
 
 
 ## Notes
