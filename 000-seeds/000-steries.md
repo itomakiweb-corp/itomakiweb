@@ -8,12 +8,12 @@
 
 ## Perfect Steries (Questions) as of 20200206
 
-1. Comunity: English/Japanese
+1. Comunity: English/Japanese, Management
 1. Growth
 1. Product/Business
 1. Lean Startup/MIT24
 1. MVP (Minimum Viable Product) + Early Adopters
-1. Agile: Scrum/XP (Extreme Programming)/Management
+1. Agile: Scrum/XP (Extreme Programming)
 1. Experts/Begginers
 1. Education/Learning
 1. Web Development
@@ -51,6 +51,6 @@
 
 1. Difficulty: Lv2/5 (Beginner)
 1. Creator: [hidecharo](https://github.com/hidecharo) ([@hidecharo](https://twitter.com/hidecharo)) / Limited Answer Talker: Lv0~4/5 (Expert)
-1. Term: 2000-01-06 (Thu) ~ 2020-02-06 (Thu)
-1. Time Taken: Over 20 Year (Over 15,000 Hour)
+1. Term: 1985-03-06 (Thu) ~ 2020-02-06 (Thu)
+1. Time Taken: Over 35 Year (Over 15,000~120,000 Hour)
 1. Stery: Original word, "Mystery to My Stery" Created by Genius: Lv5/unknown (Ultimate?)
