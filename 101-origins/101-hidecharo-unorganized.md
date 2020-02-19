@@ -1,10 +1,13 @@
-# 20200220午前の #学習 (#Learning/#Education) です。
+## 20200220午前の #学習 (#Learning/#Education) です。
 
 - https://github.com/itomakiweb-corp/itomakiweb/pull/11
 
-## #プルリクエスト (#PullRequest) の本質 (#Essence)
+### #プルリクエスト (#PullRequest) の本質 (#Essence)
 
-- 誤解のない文章の作成のために、推敲が大事です。
+- 教わる側 (#Leaner) は、教える側 (#Educator) に誤解のない、レビュー依頼が必要です。
+- 誤解のない文書作成のために、推敲が大事です。
+- 推敲には、複数の技能の本質理解が必要です。
+
 
 ```
 Skip to content
