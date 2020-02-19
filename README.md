@@ -1,4 +1,4 @@
-## Itomakiweb!💫 - やってみよう！
+## Itomakiweb!💫 - Let's try it!
 
 ### Creativity
 
