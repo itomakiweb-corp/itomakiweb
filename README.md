@@ -14,3 +14,5 @@
 - https://beta.techfeed.io/people/@hidecharo
 - https://b.hatena.ne.jp/hidecharo/bookmark
 - https://connpass.com/user/hidecharo/
+
+
