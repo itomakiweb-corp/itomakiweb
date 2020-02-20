@@ -6,6 +6,8 @@ https://b.hatena.ne.jp/hidecharo/bookmark
 木
 github actions, 権限のない人が、fileを作るとき、greetingsに失敗する模様
 まず、権限のある人が、あえてファイルを作る必要がある　なんでだろう
+Witにみちたぶらん
+もわんもわんもわん
 
 ただのゲームです。
 ボードゲーム。過去最高難易度の、ゲームです。
