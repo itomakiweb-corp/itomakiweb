@@ -1,4 +1,4 @@
-## Itomakiweb!😝 - Let's try it!😊, Let's go next!🥰
+## Itomakiweb!💫 - Let's try it!
 
 ### Creativity
 
@@ -15,4 +15,4 @@
 - https://b.hatena.ne.jp/hidecharo/bookmark
 - https://connpass.com/user/hidecharo/
 
-### TEST
+
