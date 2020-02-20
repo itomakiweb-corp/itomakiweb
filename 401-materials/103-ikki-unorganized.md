@@ -22,3 +22,6 @@ teamであるにはphilosophyが必要
 GitHubを使用するのにdocumentの正確な記述が必須
 
 →teamのphilosophyとroleとresourseの再確認？
+
+
+fork test
