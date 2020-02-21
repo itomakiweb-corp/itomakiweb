@@ -1,3 +1,19 @@
+## 20200221午後の #学習 (#Learning/#Education) です。
+
+- https://github.com/itomakiweb-corp/itomakiweb/pull/27
+
+### #CriticalChainPMF
+
+1. PMF: OSS Comunity From Begginer to Creator = ReNamer/Namer/Seeder/Origin
+1. Method: 1GH (GitHub)/1PR (Pull Request)/RFP/RFC From Begginer to Creator = Education/Learning Ecosystem
+1. Required Skills (Educator): Pull Request Essence Lv9 (Creator)
+
+
+```
+TODO
+```
+
+
 ## 20200220午前の #学習 (#Learning/#Education) です。
 
 - https://github.com/itomakiweb-corp/itomakiweb/pull/11
