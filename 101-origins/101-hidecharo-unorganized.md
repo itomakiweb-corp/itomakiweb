@@ -6,7 +6,7 @@
 
 1. PMF: OSS Comunity From Begginer to Creator = ReNamer/Namer/Seeder/Origin
 1. Method: 1GH (GitHub) + 1PR (Pull Request)/2RFP/3RFC From Begginer to Creator = Education/Learning Ecosystem
-1. Required Skills (Educator): Pull Request Essence Lv9 (Creator), Development Skill Lv4~X (Expert~Master)
+1. Required Skills (Educator): Pull Request Essence Lv9 (Creator), Development Skill Lv4\~X (Expert~Master)
 
 
 ```
@@ -35,8 +35,12 @@ GPLv3を前提にしています。
 費用もないけど、
 利益も生みません。
 
+私は、割合は変わりましたが、
+現在も、開発もすれば、企画や運用、創業手伝いなど、
+全部を行っています。
 ```
 
+![PMF](https://github.com/itomakiweb-corp/itomakiweb/raw/master/101-origins/104-kazucharo-000-steries101-pmf.jpg)
 
 ## 20200220午前の #学習 (#Learning/#Education) です。
 
