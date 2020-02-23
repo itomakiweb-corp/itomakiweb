@@ -5,8 +5,8 @@
 ### #CriticalChainPMF
 
 1. PMF: OSS Comunity From Begginer to Creator = ReNamer/Namer/Seeder/Origin
-1. Method: 1GH (GitHub)/1PR (Pull Request)/RFP/RFC From Begginer to Creator = Education/Learning Ecosystem
-1. Required Skills (Educator): Pull Request Essence Lv9 (Creator)
+1. Method: 1GH (GitHub) + 1PR (Pull Request)/2RFP/3RFC From Begginer to Creator = Education/Learning Ecosystem
+1. Required Skills (Educator): Pull Request Essence Lv9 (Creator), Development Skill Lv4~X (Expert~Master)
 
 
 ```
@@ -16,6 +16,10 @@
 完璧に思える、連鎖するPMFです。
 なんとなくであれば、
 大小3~18個程度のPMFが見えます。
+
+1. 知の財産の集結
+2. 実践プロダクト提案依頼や要件定義 (Educator's pros) + 開発経験 (Leaner's pros)
+3. 組織構造の明確化 fork chain
 
 GPLv3を前提にしています。
 学習のエコシステムです。
