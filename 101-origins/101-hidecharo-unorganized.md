@@ -64,6 +64,32 @@ GPLv3を前提にしています。
 私は、割合は変わりましたが、
 現在も、開発もすれば、企画や運用、創業手伝いなど、
 全部を行っています。
+
+
+https://twitter.com/zeroichi69/status/1232081504907345921?s=20
+ざっと読ませていただきました。内容を理解できていないのですが、独自の組織構造理論という認識でお間違いないでしょうか。
+フリーランスチームというとやはりビジネスを優先し収益を上げなければならないと思うのですが、その点は解決されていない認識でいいでしょうか？
+Translate Tweet
+8:14 AM · Feb 25, 2020·Twitter for Android
+Hide Charo (ひで) White heart
+@hidecharo
+·
+1m
+Replying to 
+@zeroichi69
+感謝です。
+独自の、組織理論と学習理論と文書理論など、です。3~9程度の要素まとめあげです。
+
+ビジネスは未解決ですが、
+専門家が入れば、
+簡単に解決可能だと思います。
+
+GAFAでも単独しかない、
+PMFが複数あるためです。
+教育対価に、学習者に製品開発、販売検討も可能。
+
+
+
 ```
 
 ![PMF](https://github.com/itomakiweb-corp/itomakiweb/raw/master/101-origins/104-kazucharo-000-steries101-pmf.jpg)
