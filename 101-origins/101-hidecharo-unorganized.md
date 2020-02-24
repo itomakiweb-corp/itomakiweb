@@ -10,7 +10,7 @@
 
 ### #CriticalChainPMF
 
-1. PMF: OSS Comunity From Begginer to Creator = ReNamer/Namer/Seeder/Origin
+1. PMF: OSS Community From Begginer to Creator = ReNamer/Namer/Seeder/Origin
 1. Method: 1GH (GitHub) + 1PR (Pull Request)/2RFP/3RFC From Begginer to Creator = Education/Learning Ecosystem
 1. Required Skills (Educator): Pull Request Essence Lv9 (Creator), Development Skill Lv4\~X (Expert~Master)
 
