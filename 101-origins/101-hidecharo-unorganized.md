@@ -18,7 +18,7 @@
 ```
 
 簡単に言うと、
-「forkで組織構造」
+「Forkで組織構造」
 「Pull Requestで品質担保 (Wikipedia再創造)」
 「教育者と学習者でプロダクト開発」などかな。
 
@@ -33,7 +33,7 @@
 #GitHub (#1GH) というエンジニア共通の、
 情報管理ツールにまとめてあります。
 
-https://github.com/itomakiweb-corp/itomakiweb/blob/433620084375946e5309c5768fde23afba2b17e2/101-origins/101-hidecharo-unorganized.md
+https://github.com/itomakiweb-corp/itomakiweb/blob/hidecharo-patch-1/101-origins/101-hidecharo-unorganized.md
 
 https://github.com/itomakiweb-corp/itomakiweb/pull/27/files
 
