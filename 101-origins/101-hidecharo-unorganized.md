@@ -1,6 +1,11 @@
 ## 20200221午後の #学習 (#Learning/#Education) です。
 
 - https://github.com/itomakiweb-corp/itomakiweb/pull/27
+- 大本のSeed/MySteries/Questions
+- https://github.com/itomakiweb-corp/itomakiweb/blob/master/000-seeds/000-steries.md
+- pmf
+- https://note.com/kenichiro_hara/n/nde3bf0c242b1
+
 
 ### #CriticalChainPMF
 
