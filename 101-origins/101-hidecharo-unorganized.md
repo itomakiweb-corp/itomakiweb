@@ -10,6 +10,32 @@
 
 
 ```
+
+簡単に言うと、
+「forkで組織構造」
+「Pull Requestで品質担保 (Wikipedia再創造)」
+「教育者と学習者でプロダクト開発」などかな。
+
+全て公開前提の
+「Open Web」
+「善意」
+「学習エコシステム」
+構想が前提です。
+
+その先に以下展開があります。
+
+#GitHub (#1GH) というエンジニア共通の、
+情報管理ツールにまとめてあります。
+
+https://github.com/itomakiweb-corp/itomakiweb/blob/433620084375946e5309c5768fde23afba2b17e2/101-origins/101-hidecharo-unorganized.md
+
+https://github.com/itomakiweb-corp/itomakiweb/pull/27/files
+
+https://github.com/itomakiweb-corp/itomakiweb/pulls
+
+https://twitter.com/hidecharo/status/1232060183204921344?s=20
+
+
 問題発見までの構想33年、
 問題解決のための飛躍に2年です。
 膨大な学習の果てに見つけた、
