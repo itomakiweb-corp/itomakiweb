@@ -3,7 +3,7 @@
  - ファシリテート権：tanukinoyu
  - 決定権：tanukinoyuが持つ（進行時、みんなに選択肢を問う。問題なければ、tanukinoyuが決定する）
  - 拒否権：kazucharoが持つ（必要ならkazucharoが拒否権を行使できる）
- - 議事録係：ランダム（ファシリテーターのtanukinoyuを除く）
+ - 議事録権：ランダム（ファシリテーターのtanukinoyuを除く）
  - tanukinoyuアカウントのリモートリポジトリをfork元とし、作業する
  - 将来的にはbe-アカウントのリモートリポジトリもfork元とし、2チーム体制を目指す
     
