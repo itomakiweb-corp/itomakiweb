@@ -456,4 +456,12 @@ Member hidecharo commented now はい。よろしくお願いいたします。 
 3. 出身: 東京都
 4. 活躍: タレント、女優、歌手、声優、漫画など、多方面
 
+# share result
 
+- https://twitter.com/hidecharo/status/1231150258987528192/analytics
+- Impressions: 102
+- Total Engagements: 8
+- Link clicks: 3
+- Detail expands: 3
+- Likes: 1
+- Profile clicks: 1
