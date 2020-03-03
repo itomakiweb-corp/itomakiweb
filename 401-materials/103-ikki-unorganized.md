@@ -1,3 +1,5 @@
+・常識を疑う
+
 <h2>メモ</h2>
 
 「role」と「synergy」と「share」
