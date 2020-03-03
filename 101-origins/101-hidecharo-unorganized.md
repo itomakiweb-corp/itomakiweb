@@ -436,3 +436,32 @@ Blog
 About
 Member hidecharo commented now はい。よろしくお願いいたします。 ユ。さんの、コメントには、全て返答しました。
 ```
+
+# #書籍紹介
+
+1. 題名: 「「死ぬんじゃねーぞ!!」 いじめられている君はゼッタイ悪くない」
+2. 「あなたのじかんはあなたのもの」
+3. 「いじめをなくすためにいまできることは何なのか」
+4. 『学校に行くのがつらい、そんな夜に読んでほしい。』
+5. 発売: 2019/08/08
+6. 発行: 文藝春秋
+7. 購入: https://www.amazon.co.jp/dp/4163910727/
+8. 形式: 言葉と漫画
+
+
+# #創作者 (#Creator)
+
+1. 著者: 中川しようこ さん
+2. 生年月日: 1985/05/05
+3. 出身: 東京都
+4. 活躍: タレント、女優、歌手、声優、漫画など、多方面
+
+# share result
+
+- https://twitter.com/hidecharo/status/1231150258987528192/analytics
+- Impressions: 102
+- Total Engagements: 8
+- Link clicks: 3
+- Detail expands: 3
+- Likes: 1
+- Profile clicks: 1
