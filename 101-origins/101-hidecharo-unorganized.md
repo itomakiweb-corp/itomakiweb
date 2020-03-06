@@ -2,6 +2,7 @@
 
 - 原本プルリクエスト
   - https://github.com/itomakiweb-corp/itomakiweb/pull/27
+  - プルリクエストとは、最小限の論文査読のことである
 - 大本のSeed/MySteries/Questions
   - https://github.com/itomakiweb-corp/itomakiweb/blob/master/000-seeds/000-steries.md
 - pmf (超高等抽象概念です。私は理解に20年かかりました)
