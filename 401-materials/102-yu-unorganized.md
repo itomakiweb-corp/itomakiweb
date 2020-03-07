@@ -13,6 +13,7 @@
  - [GNUライセンス使用法](https://www.gnu.org/licenses/gpl-howto.ja.html)
 
  ### 新体制でのBankit!開発
+ TODO 別途bankリポジトリへのルール反映が必要
 
  - ファシリテート権：tanukinoyuが持つ（開発の進行役）
  - 決定権：tanukinoyuが持つ（進行時、みんなに選択肢を問う。問題なければ、tanukinoyuが決定する）
