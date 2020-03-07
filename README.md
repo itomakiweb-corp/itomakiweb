@@ -13,6 +13,8 @@
 - https://itomakiweb.com/ 
 - https://github.com/hidecharo
 - https://twitter.com/hidecharo
+- https://jp.quora.com/profile/Hide-Charo
+- https://www.quora.com/profile/Hide-Charo
 - https://medium.com/@hidecharo
 - https://www.youtube.com/channel/UCXgOVLY0IysJOImKVl_kOjQ/playlists
 
@@ -21,5 +23,3 @@
 - https://beta.techfeed.io/people/@hidecharo
 - https://b.hatena.ne.jp/hidecharo/bookmark
 - https://connpass.com/user/hidecharo/
-
-
