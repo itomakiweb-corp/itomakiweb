@@ -1,3 +1,144 @@
+## 20200221午後の #学習 (#Learning/#Education) です。
+
+- 原本プルリクエスト
+  - https://github.com/itomakiweb-corp/itomakiweb/pull/27
+  - プルリクエストとは、最小限の論文査読のことである
+- 大本のSeed/MySteries/Questions
+  - https://github.com/itomakiweb-corp/itomakiweb/blob/master/000-seeds/000-steries.md
+- pmf (超高等抽象概念です。私は理解に20年かかりました)
+  - https://note.com/kenichiro_hara/n/nde3bf0c242b1
+
+
+### #CriticalChainPMF
+
+1. PMF: OSS Community From Begginer to Creator = ReNamer/Namer/Seeder/Origin
+1. Method: 1GH (GitHub) + 1PR (Pull Request)/2RFP/3RFC From Begginer to Creator = Education/Learning Ecosystem
+1. Required Skills (Educator): Pull Request Essence Lv9 (Creator), Development Skill Lv4\~X (Expert~Master)
+
+
+```
+
+私の創造した、
+「Open Webは、学習経路の再利用を基礎とします」
+「私が現在持つ全技能は、短期間で、ほぼ完全再現可能です」
+簡単に言うと、
+「Forkで組織構造」
+「Pull Requestで品質担保 (Wikipedia再創造)」
+「教育者と学習者でプロダクト開発」などかな。
+
+全て公開前提の
+「Open Web」
+「善意」
+「学習エコシステム」
+構想が前提です。
+
+その先に以下展開があります。
+
+#GitHub (#1GH) というエンジニア共通の、
+情報管理ツールにまとめてあります。
+
+https://github.com/itomakiweb-corp/itomakiweb/blob/hidecharo-patch-1/101-origins/101-hidecharo-unorganized.md
+
+https://github.com/itomakiweb-corp/itomakiweb/pull/27/files
+
+https://github.com/itomakiweb-corp/itomakiweb/pulls
+
+https://twitter.com/hidecharo/status/1232060183204921344?s=20
+
+
+問題発見までの構想33年、
+問題解決のための飛躍に2年です。
+膨大な学習の果てに見つけた、
+完璧に思える、連鎖するPMFです。
+なんとなくであれば、
+大小3~18個程度のPMFが見えます。
+
+1. 知の財産の集結
+2. 実践プロダクト提案依頼や要件定義 (Educator's pros) + 開発経験 (Leaner's pros)
+3. 組織構造の明確化 fork chain
+
+GPLv3を前提にしています。
+学習のエコシステムです。
+既存システムの大半置換さえ、
+可能そうに見えます。
+
+ただ、巨大過ぎて、
+何が起きるか想像がつかないです。
+私は善意しか思いつけないので。
+
+後は、ビジネス面です。
+何も考えなければ、
+費用もないけど、
+利益も生みません。
+
+私は、割合は変わりましたが、
+現在も、開発もすれば、企画や運用、創業手伝いなど、
+全部を行っています。
+
+
+https://twitter.com/zeroichi69/status/1232081504907345921?s=20
+ざっと読ませていただきました。内容を理解できていないのですが、独自の組織構造理論という認識でお間違いないでしょうか。
+フリーランスチームというとやはりビジネスを優先し収益を上げなければならないと思うのですが、その点は解決されていない認識でいいでしょうか？
+Translate Tweet
+8:14 AM · Feb 25, 2020·Twitter for Android
+Hide Charo (ひで) White heart
+@hidecharo
+·
+1m
+Replying to 
+@zeroichi69
+感謝です。
+独自の、組織理論と学習理論と文書理論など、です。3~9程度の要素まとめあげです。
+
+ビジネスは未解決ですが、
+専門家が入れば、
+簡単に解決可能だと思います。
+
+GAFAでも単独しかない、
+PMFが複数あるためです。
+教育対価に、学習者に製品開発、販売検討も可能。
+```
+
+```
+ありがとうございます。
+ただ、僕が知りたいフリーランスチームの課題というよりは、責任者がいて、その下に複数のPMF（プロダクトマーケットフィットでいいでしょうか？）が連鎖するという構造からみるに、どちらかというと大企業の構造に近い気がします。
+
+
+大企業に近いのは、
+私が10年以上勤めているからですね。
+
+ただ、私は愉快な仲間達6人と、
+創業に近い #OSSCommunity 関係を、
+2年以上構築できています。
+私が教え、本気の仲間が学習する関係です。
+
+まだまだ荒削りですが、
+毎週アプリ更新リリースしています。
+報酬なしで、少数でも、
+目的が、完全に合致 (#PMF) すれば、
+大企業レベルに近い製品が作成可能なんですよ。
+
+ある程度技能の高いエンジニアであれば、
+だいだい目的は一致するので、
+責任者は、全員がなればよいかな？おそらく。
+最初は責任者少数が、やりやすいとは思いますけどね。
+フリーランスの連合にも適応できるはずですよ？
+
+今までは、
+愉快な仲間達の中では、
+私が責任者として、
+品質保証である、
+プルリクエストの門番になったいましたが、
+先週、成長した仲間に引き継ぎました。
+
+つまり、無限の広がりが作れる可能性があります。
+それも #GPLv3 のコピーレフト概念を、
+フル活用することで、ですね。
+
+```
+
+![PMF](https://github.com/itomakiweb-corp/itomakiweb/raw/master/101-origins/104-kazucharo-000-steries101-pmf.jpg)
+
 ## 20200220午前の #学習 (#Learning/#Education) です。
 
 - https://github.com/itomakiweb-corp/itomakiweb/pull/11
