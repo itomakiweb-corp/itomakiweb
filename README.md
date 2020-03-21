@@ -9,8 +9,16 @@
     
 ### Creativity
 
+#### itomakiweb
+
 - https://github.com/itomakiweb-corp/itomakiweb
 - https://itomakiweb.com/ 
+- https://github.com/itomakiweb
+- https://twitter.com/itomakiweb
+- https://www.youtube.com/channel/UCavIEDZz4UE3-1j-cK1htBQ
+
+#### hidecharo
+
 - https://github.com/hidecharo
 - https://twitter.com/hidecharo
 - https://jp.quora.com/profile/Hide-Charo
@@ -19,6 +27,13 @@
 - https://www.youtube.com/channel/UCXgOVLY0IysJOImKVl_kOjQ/playlists
 
 ### Curation
+
+#### itomakiweb
+
+- https://b.hatena.ne.jp/itomakiweb/bookmark
+- https://connpass.com/user/itomakiweb/
+
+#### hidecharo
 
 - https://beta.techfeed.io/people/@hidecharo
 - https://b.hatena.ne.jp/hidecharo/bookmark
