@@ -24,24 +24,30 @@
 1. 今日やるべきことは、戦術的に、12個ありますよー。
 1. まずは、先週の土曜日の勉強会のまとめー。
     - https://github.com/itomakiweb-corp/itomakiweb/pull/42
-1. VTuberに音をつける。おそらく、いったんは、グーグル翻訳の音声読み上げ機能で十分
+1. Lv0 (only use tool): VTuberに音をつける。おそらく、いったんは、グーグル翻訳の音声読み上げ機能で十分
     - https://translate.google.com/?hl=ja
-1. YouTubeのコメント読み上げ機能を作る　C++でサンプルコードがあったので、それを参考にして、Node.jsで作り直し
+1. Lv5~? (difficult need to get browser code? there should be exist API, isn't it?) YouTubeのコメント読み上げ機能を作る　C++でサンプルコードがあったので、それを参考にして、Node.jsで作り直し
     - https://github.com/itomakiweb-corp/YouTubeLiveGetCommentsSample
     - https://github.com/itomakiweb-corp/YouTubeLiveCommentViewer
-1. 家事、洗い物、掃除
+1. Lv3~ (advanced) 家事、洗い物、掃除
     - 洗濯？は今日はいいかな。
-1. 勉強会、配信中にもう一つ参加するので、その準備も。
+1. Lv7~ (origin) 勉強会、配信中にもう一つ参加するので、その準備も。
     - https://peer-quest.connpass.com/event/170615/
-1. YouTubeで他VTuverチャンネルで、コメントしてみる
+1. Lv1 (only use tool, but should be proud) YouTubeで他VTuverチャンネルで、コメントしてみる
     - https://www.youtube.com/watch?v=pcn8NgxgGwM
-1. Twitter拡散が遅い。。が、後回しかなー。
+1. Lv5 (should be branding and direct marketing) Twitter拡散が遅い。。が、後回しかなー。
     - http://twitter.com/
-1. Quora運用は、やった方がいい気がする
+1. Lv3~9 (need to extra skills) Quora運用は、やった方がいい気がする
     - https://jp.quora.com/
-1. Facebook運用は、いいかな？今回は後回しかなあ
+1. Lv1~3 (nedd to before meeting) Facebook運用は、いいかな？今回は後回しかなあ
     - https://www.facebook.com/itomakiweb
-1. そして、Switch でのゲーム配信環境の構築。
+1. Lv5 (difficult for me) そして、Switch でのゲーム配信環境の構築。
     - 可能なら、の項目
-1. PS4 でのゲーム配信環境の構築
+1. Lv6 (difficult for me) PS4 でのゲーム配信環境の構築
     - 可能なら、の項目
+1. Lv2 (difficult for me) 3DS でのゲーム配信環境の構築
+    - 可能なら、の項目
+    - 単純に、画面を動画で移すだけで良い。
+    - とりあえず、3DSの充電器を見つけたいよー
+    - やわらかあたま塾、きちんと、ハイスコアを取り戻したいのに、プレイできないよー！？
+    - どこにあるか、まったく、わからないよー！？
