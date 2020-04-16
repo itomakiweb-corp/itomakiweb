@@ -21,6 +21,7 @@
 ## Strategies
 
 1. No.201: 「わかんないよー！？」 いとまき『何もわからない系VTuber』（伊藤まき）
+1. No.301: 「#SportsTech = #Sports + #Technology」『#わかんないよー！？』/"https://spoana.connpass.com/event/171653/" 'I know #Entertainment.'
 1. さて？後回しー
 
 ### Tactics at 20200330 to Strategy No.201『 「わかんないよー！？」 いとまき『何もわからない系VTuber』（伊藤まき）』
