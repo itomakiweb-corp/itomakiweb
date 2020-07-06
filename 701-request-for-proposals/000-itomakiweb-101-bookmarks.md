@@ -4,9 +4,80 @@
 
 1. Nuxt.jsでの実装例
     - https://itomakiweb-bbs.web.app/bookmarks/JkNmoypDeqGGzqmT6p6E
-1. データ構造
+1. データ構造（再帰構造）
     ```
-    TODO
+      {
+        // required
+        // pointX: 0,
+        // pointY: 0,
+        sizeX: 1,
+        sizeY: 1,
+        clickCount: 0,
+        url: 'https://hemino.com/',
+        // TODO 内部用のURLを保存するかも 内部遷移用
+        // TODO bottomNaviのmode選択再検討
+        title: 'ヘミノ',
+
+        // optional
+        titleShort: 'Hemino',
+        body: 'ヘミノ：興味と知識の集約サイト',
+        // body: '',
+        icon: 'https://hemino.com/2b.png', // このブックマークのアイコン
+        showIcon: true,
+        image: '', // このブックマークの横長画像
+        showImage: false,
+        backgroundColor: '',
+        color: '',
+        bookmarkItems: [
+        ],
+        assigneeItems: [],
+        tagItems: [],
+        // labels: [],
+        projectItems: [],
+        // milestone: '',
+        milestoneItems: [],
+        html: {
+          head: {
+            // common
+            charset: '',
+            title: '',
+            appleMobileWebAppTitle: '', // titleShort
+            description: '',
+            keywords: '',
+            icon: '', // pc favicon
+            shortcutIcon: '', // pc favicon old
+            appleTouchIcon: '', // iOS, Android touch icon
+
+            // extra
+            manifest: '',
+            mobileWebAppCapable: '', // 全画面表示
+            viewport: '', // iOS, Android 表示指定
+            author: '',
+            themeColor: '',
+            formatDetection: '',
+            // stylesheets: [],
+
+            // OGP
+            og: '', //  TOP: website、TOP以外: article
+            ogUrl: '',
+            ogType: '', //  TOP: website、TOP以外: article
+            ogTitle: '', // 20文字以内で設定することが好ましい
+            ogDescription: '', // 80~90文字が最適
+            ogSiteName: '',
+            ogLocale: '', // ja_JP
+            ogImage: '', // 1200×630、比率で1.91：1を推奨, 絶対パス
+
+            // OGP Facebook
+            fbAppId: '', // 15文字の半角数字, 推奨
+            fbAdmins: '', // 15文字の半角数字, 個人ID, 非推奨
+
+            // OGP Twitter
+            twitterCard: '', // summary, summary_large_image, photo, gallery, app
+            twitterSite: '', // @twitterId
+            twitterPlayer: '', // @twitterId
+          },
+        },
+      }
     ```
 
 ### 仕様（実装に合わせて随時修正）
