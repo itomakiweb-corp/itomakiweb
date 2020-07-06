@@ -98,6 +98,12 @@
 ### TODO
 
 1. formの表示
+    1. URL入力ボックス・タイトル入力ボックス・送信ボタンを最低限表示
+        - https://api.flutter.dev/flutter/material/TextField-class.html
+    1. 送信ボタンをクリック後に、URL・タイトルの入力値を取得
+        - https://qiita.com/kurun_pan/items/3378875ff034614f381a
+    1. 取得した値を、firestoreに保存
+        - サンプルで実装済み
 1. 要素の表示
 1. 情報の取得
 1. 要素の整形（表のように表示）
