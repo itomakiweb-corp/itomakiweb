@@ -56,8 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      Firestore.instance.collection('books').document()
-        .setData({ 'title': 'title', 'author': 'author' });
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
@@ -81,8 +79,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: BookList(),
       /*
+      body: BookList(),
+      body: WidgetSample(),
+      */
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -110,10 +110,24 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            /*
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'URL',
+              ),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'タイトル',
+              ),
+            ),
+            */
+            BookmarkEditor(),
           ],
         ),
       ),
-      */
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
@@ -144,6 +158,84 @@ class BookList extends StatelessWidget {
             );
         }
       },
+    );
+  }
+}
+
+class BookmarkEditor extends StatefulWidget {
+  @override
+  BookmarkEditorState createState() => BookmarkEditorState();
+}
+class BookmarkEditorState extends State<BookmarkEditor> {
+  final _formKey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          TextFormField(
+            decoration: const InputDecoration(
+              icon: Icon(Icons.link),
+              labelText: 'URL',
+              hintText: 'URLを入力してください',
+              border: OutlineInputBorder(),
+            ),
+            autovalidate: false,
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'URLを入力してください';
+              }
+
+              return null;
+            },
+            // this._formKey.currentState.save()で呼び出される
+            // TODO ここの情報が呼び出されていない
+            onSaved: (value) => () {
+              Firestore.instance.collection('books').document()
+                .setData({
+                  'url': '$value',
+                  'title': 'TODO next time',
+                });
+            },
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              icon: Icon(Icons.title),
+              border: OutlineInputBorder(),
+              labelText: 'タイトル',
+              hintText: 'タイトルを入力してください',
+            ),
+            autovalidate: false,
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'タイトルを入力してください';
+              }
+
+              return null;
+            },
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: RaisedButton(
+              onPressed: () {
+                // validate success
+                if (_formKey.currentState.validate()) {
+                  Firestore.instance.collection('books').document()
+                    .setData({
+                      'url': 'TODO url',
+                      'title': 'TODO next time',
+                    });
+                  this._formKey.currentState.save();
+                }
+              },
+              child: Text('情報を登録する'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
