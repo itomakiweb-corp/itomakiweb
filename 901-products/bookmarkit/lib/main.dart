@@ -2,19 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/rendering.dart';
 
-const bookmarkItems = [
-  {
-    'title': 'test',
-    'titleShort': 'test',
-    'url': 'https://hemino.com/',
-  },
-  {
-    'title': 'test2',
-    'titleShort': 'test',
-    'url': 'https://hemino.com/',
-  },
-];
-
 void main() {
   runApp(MyApp());
 }
@@ -184,18 +171,35 @@ class BookmarkViewer extends StatefulWidget {
 }
 
 class BookmarkViewerState extends State<BookmarkViewer> {
+  Map<String, dynamic> _bookmarkItem = getBookmarkItem();
+
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    var aspectRatio = size.aspectRatio;
+    int crossAxisCount;
+    double childAspectRatio;
+    if (aspectRatio > 1) {
+      crossAxisCount = 4;
+      childAspectRatio = 4;
+    } else {
+      crossAxisCount = 4;
+      childAspectRatio = 1;
+    }
+
     return GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(20),
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
-      crossAxisCount: 2,
-      children: bookmarkItems.map((bookmarkItem) {
+      padding: const EdgeInsets.all(4),
+      crossAxisSpacing: 4,
+      mainAxisSpacing: 4,
+      crossAxisCount: crossAxisCount,
+      childAspectRatio: childAspectRatio,
+      // crossAxisCount: 4,
+      // childAspectRatio: 6,
+      children: _bookmarkItem['bookmarkBaseItems'].map((bookmarkBaseItem) {
         return Container(
-          padding: const EdgeInsets.all(8),
-          child: Text("${bookmarkItem['title']}"),
+          padding: const EdgeInsets.all(4),
+          child: Text("${bookmarkBaseItem['title']}"),
           color: Colors.teal[100],
         );
       }).toList(),
@@ -283,4 +287,39 @@ class BookmarkEditorState extends State<BookmarkEditor> {
       ),
     );
   }
+}
+
+Map<String, dynamic> getBookmarkItem() {
+  var bookmarkItem = getBookmarkBaseItem();
+  bookmarkItem['sizeX'] = 4;
+  bookmarkItem['sizeY'] = 6;
+  final bookmarkMaxCount = bookmarkItem['sizeX'] * bookmarkItem['sizeY'];
+  bookmarkItem['bookmarkBaseItems'] = [];
+  for (var i = 0; i < bookmarkMaxCount; i++) {
+    bookmarkItem['bookmarkBaseItems'].add(getBookmarkBaseItem());
+  }
+
+  return bookmarkItem;
+}
+
+Map<String, dynamic> getBookmarkBaseItem() {
+  return {
+    'sizeX': 1,
+    'sizeY': 1,
+    'clickCount': 0,
+    'title': 'ヘミノ',
+    'titleShort': 'Hemino',
+    'icon': 'https://hemino.com/2b.png',
+    'url': 'https://hemino.com/',
+    'body': '', // ヘミノ：興味と知識の集約サイト
+    'refShortcutIcon': '',
+    'refAppleTouchIcon': '',
+    'refOgType': '', // website or article
+    'refOgUrl': '',
+    'refOgTitle': '',
+    'refOgDescrption': '',
+    'refOgSiteName': '',
+    'refOgLocale': '',
+    'refOgImage': '',
+  };
 }
