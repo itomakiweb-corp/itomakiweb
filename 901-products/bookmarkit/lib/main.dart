@@ -168,6 +168,8 @@ class BookmarkEditor extends StatefulWidget {
 }
 class BookmarkEditorState extends State<BookmarkEditor> {
   final _formKey = GlobalKey<FormState>();
+  String _url = '';
+  String _titleShort = '';
 
   @override
   Widget build(BuildContext context) {
@@ -191,14 +193,8 @@ class BookmarkEditorState extends State<BookmarkEditor> {
 
               return null;
             },
-            // this._formKey.currentState.save()で呼び出される
-            // TODO ここの情報が呼び出されていない
-            onSaved: (value) => () {
-              Firestore.instance.collection('books').document()
-                .setData({
-                  'url': '$value',
-                  'title': 'TODO next time',
-                });
+            onSaved: (value) {
+              this._url = value;
             },
           ),
           TextFormField(
@@ -216,6 +212,9 @@ class BookmarkEditorState extends State<BookmarkEditor> {
 
               return null;
             },
+            onSaved: (value) {
+              this._titleShort = value;
+            },
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -223,12 +222,17 @@ class BookmarkEditorState extends State<BookmarkEditor> {
               onPressed: () {
                 // validate success
                 if (_formKey.currentState.validate()) {
+                  // 以下メソッド呼び出し後、onSavedが呼び出される
+                  this._formKey.currentState.save();
                   Firestore.instance.collection('books').document()
                     .setData({
-                      'url': 'TODO url',
-                      'title': 'TODO next time',
+                      'url': this._url,
+                      'title': this._titleShort,
+                      /*
+                      'url': '$_url',
+                      'title': '$_titleShort',
+                      */
                     });
-                  this._formKey.currentState.save();
                 }
               },
               child: Text('情報を登録する'),
