@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/rendering.dart';
 
+const bookmarkItems = [
+  {
+    'title': 'test',
+    'titleShort': 'test',
+    'url': 'https://hemino.com/',
+  },
+  {
+    'title': 'test2',
+    'titleShort': 'test',
+    'url': 'https://hemino.com/',
+  },
+];
 
 void main() {
   runApp(MyApp());
@@ -79,10 +92,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+      body: BookmarkViewer(),
       /*
       body: BookList(),
       body: WidgetSample(),
-      */
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -124,10 +137,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             */
+            //BookmarkViewer(),
             BookmarkEditor(),
           ],
         ),
       ),
+      */
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
@@ -143,13 +158,14 @@ class BookList extends StatelessWidget {
     return StreamBuilder<QuerySnapshot>(
       stream: Firestore.instance.collection('books').snapshots(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-        if (snapshot.hasError)
-          return new Text('Error: ${snapshot.error}');
+        if (snapshot.hasError) return new Text('Error: ${snapshot.error}');
         switch (snapshot.connectionState) {
-          case ConnectionState.waiting: return new Text('Loading...');
+          case ConnectionState.waiting:
+            return new Text('Loading...');
           default:
             return new ListView(
-              children: snapshot.data.documents.map((DocumentSnapshot document) {
+              children:
+                  snapshot.data.documents.map((DocumentSnapshot document) {
                 return new ListTile(
                   title: new Text(document['title']),
                   subtitle: new Text(document['author']),
@@ -162,10 +178,36 @@ class BookList extends StatelessWidget {
   }
 }
 
+class BookmarkViewer extends StatefulWidget {
+  @override
+  BookmarkViewerState createState() => BookmarkViewerState();
+}
+
+class BookmarkViewerState extends State<BookmarkViewer> {
+  @override
+  Widget build(BuildContext context) {
+    return GridView.count(
+      primary: false,
+      padding: const EdgeInsets.all(20),
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
+      crossAxisCount: 2,
+      children: bookmarkItems.map((bookmarkItem) {
+        return Container(
+          padding: const EdgeInsets.all(8),
+          child: Text("${bookmarkItem['title']}"),
+          color: Colors.teal[100],
+        );
+      }).toList(),
+    );
+  }
+}
+
 class BookmarkEditor extends StatefulWidget {
   @override
   BookmarkEditorState createState() => BookmarkEditorState();
 }
+
 class BookmarkEditorState extends State<BookmarkEditor> {
   final _formKey = GlobalKey<FormState>();
   String _url = '';
@@ -224,15 +266,14 @@ class BookmarkEditorState extends State<BookmarkEditor> {
                 if (_formKey.currentState.validate()) {
                   // 以下メソッド呼び出し後、onSavedが呼び出される
                   this._formKey.currentState.save();
-                  Firestore.instance.collection('books').document()
-                    .setData({
-                      'url': this._url,
-                      'title': this._titleShort,
-                      /*
+                  Firestore.instance.collection('books').document().setData({
+                    'url': this._url,
+                    'title': this._titleShort,
+                    /*
                       'url': '$_url',
                       'title': '$_titleShort',
                       */
-                    });
+                  });
                 }
               },
               child: Text('情報を登録する'),
