@@ -175,34 +175,29 @@ class BookmarkViewerState extends State<BookmarkViewer> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    var aspectRatio = size.aspectRatio;
-    int crossAxisCount;
-    double childAspectRatio;
-    if (aspectRatio > 1) {
-      crossAxisCount = 4;
-      childAspectRatio = 4;
-    } else {
-      crossAxisCount = 4;
-      childAspectRatio = 1;
+    // GridView.countはレスポンシブ対応しづらいので使わない
+    var cols = [];
+    for (var i = 0; i < _bookmarkItem['sizeY']; i++) {
+      var rowFields = <Widget>[];
+      for (var j = 0; j < _bookmarkItem['sizeX']; j++) {
+        var count = i * _bookmarkItem['sizeX'] + j;
+        var bookmarkBaseItem = _bookmarkItem['bookmarkBaseItems'][count];
+        rowFields.add(Expanded(
+          child: Container(
+            padding: const EdgeInsets.all(4),
+            child: Text("${bookmarkBaseItem['title']}"),
+            color: Colors.teal[100],
+          ),
+        ));
+      }
+      cols.add(Expanded(
+          child: Row(
+        children: rowFields,
+      )));
     }
 
-    return GridView.count(
-      primary: false,
-      padding: const EdgeInsets.all(4),
-      crossAxisSpacing: 4,
-      mainAxisSpacing: 4,
-      crossAxisCount: crossAxisCount,
-      childAspectRatio: childAspectRatio,
-      // crossAxisCount: 4,
-      // childAspectRatio: 6,
-      children: _bookmarkItem['bookmarkBaseItems'].map((bookmarkBaseItem) {
-        return Container(
-          padding: const EdgeInsets.all(4),
-          child: Text("${bookmarkBaseItem['title']}"),
-          color: Colors.teal[100],
-        );
-      }).toList(),
+    return Column(
+      children: cols,
     );
   }
 }
