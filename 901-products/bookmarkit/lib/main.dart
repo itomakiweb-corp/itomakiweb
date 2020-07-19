@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/rendering.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -183,12 +184,22 @@ class BookmarkViewerState extends State<BookmarkViewer> {
         var count = i * _bookmarkItem['sizeX'] + j;
         var bookmarkBaseItem = _bookmarkItem['bookmarkBaseItems'][count];
         rowFields.add(Expanded(
-          child: Container(
-            padding: const EdgeInsets.all(4),
-            child: Text("${bookmarkBaseItem['title']}"),
-            color: Colors.teal[100],
+            child: InkWell(
+          onTap: () {
+            launch("${bookmarkBaseItem['url']}");
+          },
+          child: Column(
+            children: [
+              Image.network(
+                "${bookmarkBaseItem['icon']}",
+                // fit: BoxFit.cover,
+                // width: 40,
+                height: 40,
+              ),
+              Text("${bookmarkBaseItem['title']}"),
+            ],
           ),
-        ));
+        )));
       }
       cols.add(Expanded(
           child: Row(
