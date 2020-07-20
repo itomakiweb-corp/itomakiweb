@@ -18,8 +18,8 @@ class ItomakiwebApp extends StatelessWidget {
       ),
       home: ItomakiwebHomePage(title: 'Bookmarkit! List'),
       routes: {
-        '/': (context) => ItomakiwebHomePage(),
-        '/bookmarks/new': (context) => BookmarkNewPage(),
+        '/': (context) => ItomakiwebHomePage(title: 'Bookmarkit! List'),
+        '/bookmarks/new': (context) => BookmarkNewPage(title: 'Bookmarkit! New'),
       },
     );
   }
@@ -160,6 +160,7 @@ class BookmarkViewer extends StatefulWidget {
 
 class BookmarkViewerState extends State<BookmarkViewer> {
   final _formKey = GlobalKey<FormState>();
+  final _formKeyForDialog = GlobalKey<FormState>();
   Map<String, dynamic> _bookmarkItem = getBookmarkItem();
   bool _doEdit = true;
 
@@ -180,11 +181,69 @@ class BookmarkViewerState extends State<BookmarkViewer> {
                 builder: (_) {
                   return AlertDialog(
                     title: Text("Edit"),
-                    content: BookmarkEditor(),
+                    content: Form(
+                      key: _formKeyForDialog,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          TextFormField(
+                            initialValue: bookmarkBaseItem['url'],
+                            decoration: const InputDecoration(
+                              icon: Icon(Icons.link),
+                              labelText: 'URL',
+                              hintText: 'URLを入力してください',
+                              border: OutlineInputBorder(),
+                            ),
+                            autovalidate: false,
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'URLを入力してください';
+                              }
+
+                              return null;
+                            },
+                            onSaved: (value) {
+                              setState(() {
+                                _bookmarkItem['bookmarkBaseItems'][count]['url'] = value;
+                              });
+                            },
+                          ),
+                          TextFormField(
+                            initialValue: bookmarkBaseItem['title'],
+                            decoration: const InputDecoration(
+                              icon: Icon(Icons.title),
+                              border: OutlineInputBorder(),
+                              labelText: 'タイトル',
+                              hintText: 'タイトルを入力してください',
+                            ),
+                            autovalidate: false,
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'タイトルを入力してください';
+                              }
+
+                              return null;
+                            },
+                            onSaved: (value) {
+                              setState(() {
+                                _bookmarkItem['bookmarkBaseItems'][count]['title'] = value;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
                     actions: [
                       FlatButton(
-                        child: Text("send"),
-                        onPressed: () => Navigator.pop(context),
+                        child: Text("save"),
+                        onPressed: () {
+                          // validate success
+                          if (_formKeyForDialog.currentState.validate()) {
+                            // 以下メソッド呼び出し後、onSavedが呼び出される
+                            _formKeyForDialog.currentState.save();
+                          }
+                          Navigator.pop(context);
+                        },
                       )
                     ],
                   );
