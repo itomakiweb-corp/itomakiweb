@@ -136,6 +136,71 @@ class BookmarkViewer extends StatefulWidget {
 
 class BookmarkViewerState extends State<BookmarkViewer> {
   Map<String, dynamic> _bookmarkItem = getBookmarkItem();
+  bool _doEdit = true;
+
+  @override
+  Widget build(BuildContext context) {
+    // GridView.countはレスポンシブ対応しづらいので使わない
+    var cols = [];
+    for (var i = 0; i < _bookmarkItem['sizeY']; i++) {
+      var rowFields = <Widget>[];
+      for (var j = 0; j < _bookmarkItem['sizeX']; j++) {
+        var count = i * _bookmarkItem['sizeX'] + j;
+        var bookmarkBaseItem = _bookmarkItem['bookmarkBaseItems'][count];
+        rowFields.add(Expanded(
+            child: InkWell(
+          onTap: () {
+            if (_doEdit) {
+              showDialog(context: context,
+                builder: (_) {
+                  return AlertDialog(
+                    title: Text("Edit"),
+                    content: BookmarkEditor(),
+                    actions: [
+                      FlatButton(
+                        child: Text("send"),
+                        onPressed: () => Navigator.pop(context),
+                      )
+                    ],
+                  );
+                }
+              );
+            } else {
+              launch("${bookmarkBaseItem['url']}");
+            }
+          },
+          child: Column(
+            children: [
+              Image.network(
+                "${bookmarkBaseItem['icon']}",
+                // fit: BoxFit.cover,
+                // width: 40,
+                height: 40,
+              ),
+              Text("${bookmarkBaseItem['title']}"),
+            ],
+          ),
+        )));
+      }
+      cols.add(Expanded(
+          child: Row(
+        children: rowFields,
+      )));
+    }
+
+    return Column(
+      children: cols,
+    );
+  }
+}
+
+class BookmarkViewer2 extends StatefulWidget {
+  @override
+  BookmarkViewerState2 createState() => BookmarkViewerState2();
+}
+
+class BookmarkViewerState2 extends State<BookmarkViewer2> {
+  Map<String, dynamic> _bookmarkItem = getBookmarkItem();
 
   @override
   Widget build(BuildContext context) {
@@ -219,6 +284,7 @@ class BookmarkEditorState extends State<BookmarkEditor> {
               labelText: 'タイトル',
               hintText: 'タイトルを入力してください',
             ),
+            initialValue: "test",
             autovalidate: false,
             validator: (value) {
               if (value.isEmpty) {
