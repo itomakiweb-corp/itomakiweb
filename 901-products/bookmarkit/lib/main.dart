@@ -95,7 +95,8 @@ class _BookmarkShowPageState extends State<BookmarkShowPage> {
             return new Text("Loading");
           }
           var bookmarkDocument = snapshot.data;
-          return new Text(bookmarkDocument["title"]);
+          return BookmarkViewer2(bookmarkItem: bookmarkDocument);
+          // return new Text(bookmarkDocument["title"]);
         }
       )
     );
@@ -283,22 +284,24 @@ class BookmarkViewerState extends State<BookmarkViewer> {
 }
 
 class BookmarkViewer2 extends StatefulWidget {
+  BookmarkViewer2({Key key, @required this.bookmarkItem}) : super(key: key);
+
+  final Map<String, dynamic> bookmarkItem;
+
   @override
   BookmarkViewerState2 createState() => BookmarkViewerState2();
 }
 
 class BookmarkViewerState2 extends State<BookmarkViewer2> {
-  Map<String, dynamic> _bookmarkItem = getBookmarkItem();
-
   @override
   Widget build(BuildContext context) {
     // GridView.countはレスポンシブ対応しづらいので使わない
     var cols = [];
-    for (var i = 0; i < _bookmarkItem['sizeY']; i++) {
+    for (var i = 0; i < widget.bookmarkItem['sizeY']; i++) {
       var rowFields = <Widget>[];
-      for (var j = 0; j < _bookmarkItem['sizeX']; j++) {
-        var count = i * _bookmarkItem['sizeX'] + j;
-        var bookmarkBaseItem = _bookmarkItem['bookmarkBaseItems'][count];
+      for (var j = 0; j < widget.bookmarkItem['sizeX']; j++) {
+        var count = i * widget.bookmarkItem['sizeX'] + j;
+        var bookmarkBaseItem = widget.bookmarkItem['bookmarkBaseItems'][count];
         rowFields.add(Expanded(
             child: InkWell(
           onTap: () {
