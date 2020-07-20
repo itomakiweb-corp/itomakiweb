@@ -135,6 +135,7 @@ class BookmarkViewer extends StatefulWidget {
 }
 
 class BookmarkViewerState extends State<BookmarkViewer> {
+  final _formKey = GlobalKey<FormState>();
   Map<String, dynamic> _bookmarkItem = getBookmarkItem();
   bool _doEdit = true;
 
@@ -187,6 +188,70 @@ class BookmarkViewerState extends State<BookmarkViewer> {
         children: rowFields,
       )));
     }
+    cols.add(Form(
+      key: _formKey,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          TextFormField(
+            initialValue: _bookmarkItem['icon'],
+            decoration: const InputDecoration(
+              icon: Icon(Icons.link),
+              labelText: 'アイコンURL',
+              hintText: 'アイコンURLを入力してください',
+              border: OutlineInputBorder(),
+            ),
+            autovalidate: false,
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'アイコンURLを入力してください';
+              }
+
+              return null;
+            },
+            onSaved: (value) {
+              _bookmarkItem['icon'] = value;
+            },
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              icon: Icon(Icons.title),
+              border: OutlineInputBorder(),
+              labelText: 'タイトル',
+              hintText: 'タイトルを入力してください',
+            ),
+            initialValue: _bookmarkItem['title'],
+            autovalidate: false,
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'タイトルを入力してください';
+              }
+
+              return null;
+            },
+            onSaved: (value) {
+              _bookmarkItem['title'] = value;
+            },
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: RaisedButton(
+              onPressed: () {
+                // validate success
+                if (_formKey.currentState.validate()) {
+                  // 以下メソッド呼び出し後、onSavedが呼び出される
+                  _formKey.currentState.save();
+                  Firestore.instance.collection('bookmarks').document().setData(
+                    _bookmarkItem
+                  );
+                }
+              },
+              child: Text('情報を登録する'),
+            ),
+          ),
+        ],
+      ),
+    ));
 
     return Column(
       children: cols,
