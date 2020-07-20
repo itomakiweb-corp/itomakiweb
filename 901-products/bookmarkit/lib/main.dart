@@ -60,24 +60,44 @@ class _ItomakiwebHomePageState extends State<ItomakiwebHomePage> {
         ],
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+        child: BookmarkList(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class BookmarkShowPage extends StatefulWidget {
+  BookmarkShowPage({Key key, this.title, @required this.documentId}) : super(key: key);
+
+  final String title;
+  final String documentId;
+
+  @override
+  _BookmarkShowPageState createState() => _BookmarkShowPageState();
+}
+
+class _BookmarkShowPageState extends State<BookmarkShowPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: new StreamBuilder(
+        stream: Firestore.instance.collection('bookmarks').document(widget.documentId).snapshots(),
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) {
+            return new Text("Loading");
+          }
+          var bookmarkDocument = snapshot.data;
+          return new Text(bookmarkDocument["title"]);
+        }
+      )
     );
   }
 }
@@ -103,11 +123,11 @@ class _BookmarkNewPageState extends State<BookmarkNewPage> {
   }
 }
 
-class BookList extends StatelessWidget {
+class BookmarkList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: Firestore.instance.collection('books').snapshots(),
+      stream: Firestore.instance.collection('bookmarks').snapshots(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) return new Text('Error: ${snapshot.error}');
         switch (snapshot.connectionState) {
@@ -119,7 +139,10 @@ class BookList extends StatelessWidget {
                   snapshot.data.documents.map((DocumentSnapshot document) {
                 return new ListTile(
                   title: new Text(document['title']),
-                  subtitle: new Text(document['author']),
+                  subtitle: new Text(document['titleShort']),
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => BookmarkShowPage(documentId: document.documentID,)));
+                  },
                 );
               }).toList(),
             );
