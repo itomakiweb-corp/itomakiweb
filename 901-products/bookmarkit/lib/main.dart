@@ -19,7 +19,8 @@ class ItomakiwebApp extends StatelessWidget {
       home: ItomakiwebHomePage(title: 'Bookmarkit! List'),
       routes: {
         '/': (context) => ItomakiwebHomePage(title: 'Bookmarkit! List'),
-        '/bookmarks/new': (context) => BookmarkNewPage(title: 'Bookmarkit! New'),
+        '/bookmarks/new': (context) =>
+            BookmarkNewPage(title: 'Bookmarkit! New'),
       },
     );
   }
@@ -35,14 +36,6 @@ class ItomakiwebHomePage extends StatefulWidget {
 }
 
 class _ItomakiwebHomePageState extends State<ItomakiwebHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,17 +55,13 @@ class _ItomakiwebHomePageState extends State<ItomakiwebHomePage> {
       body: Center(
         child: BookmarkList(),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
 
 class BookmarkShowPage extends StatefulWidget {
-  BookmarkShowPage({Key key, this.title, @required this.documentId}) : super(key: key);
+  BookmarkShowPage({Key key, this.title, @required this.documentId})
+      : super(key: key);
 
   final String title;
   final String documentId;
@@ -85,21 +74,22 @@ class _BookmarkShowPageState extends State<BookmarkShowPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: new StreamBuilder(
-        stream: Firestore.instance.collection('bookmarks').document(widget.documentId).snapshots(),
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) {
-            return new Text("Loading");
-          }
-          var bookmarkDocument = snapshot.data;
-          return BookmarkViewer2(bookmarkItem: bookmarkDocument);
-          // return new Text(bookmarkDocument["title"]);
-        }
-      )
-    );
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: new StreamBuilder(
+            stream: Firestore.instance
+                .collection('bookmarks')
+                .document(widget.documentId)
+                .snapshots(),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) {
+                return new Text("Loading");
+              }
+              var bookmarkDocument = snapshot.data;
+              return BookmarkViewer2(bookmarkItem: bookmarkDocument);
+              // return new Text(bookmarkDocument["title"]);
+            }));
   }
 }
 
@@ -142,7 +132,14 @@ class BookmarkList extends StatelessWidget {
                   title: new Text(document['title']),
                   subtitle: new Text(document['titleShort']),
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => BookmarkShowPage(documentId: document.documentID,)));
+                    var routeName = "/bookmarks/" + document.documentID;
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            settings: RouteSettings(name: routeName),
+                            builder: (context) => BookmarkShowPage(
+                                  documentId: document.documentID,
+                                )));
                   },
                 );
               }).toList(),
@@ -177,78 +174,80 @@ class BookmarkViewerState extends State<BookmarkViewer> {
             child: InkWell(
           onTap: () {
             if (_doEdit) {
-              showDialog(context: context,
-                builder: (_) {
-                  return AlertDialog(
-                    title: Text("Edit"),
-                    content: Form(
-                      key: _formKeyForDialog,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          TextFormField(
-                            initialValue: bookmarkBaseItem['url'],
-                            decoration: const InputDecoration(
-                              icon: Icon(Icons.link),
-                              labelText: 'URL',
-                              hintText: 'URLを入力してください',
-                              border: OutlineInputBorder(),
-                            ),
-                            autovalidate: false,
-                            validator: (value) {
-                              if (value.isEmpty) {
-                                return 'URLを入力してください';
-                              }
+              showDialog(
+                  context: context,
+                  builder: (_) {
+                    return AlertDialog(
+                      title: Text("Edit"),
+                      content: Form(
+                        key: _formKeyForDialog,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            TextFormField(
+                              initialValue: bookmarkBaseItem['url'],
+                              decoration: const InputDecoration(
+                                icon: Icon(Icons.link),
+                                labelText: 'URL',
+                                hintText: 'URLを入力してください',
+                                border: OutlineInputBorder(),
+                              ),
+                              autovalidate: false,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'URLを入力してください';
+                                }
 
-                              return null;
-                            },
-                            onSaved: (value) {
-                              setState(() {
-                                _bookmarkItem['bookmarkBaseItems'][count]['url'] = value;
-                              });
-                            },
-                          ),
-                          TextFormField(
-                            initialValue: bookmarkBaseItem['title'],
-                            decoration: const InputDecoration(
-                              icon: Icon(Icons.title),
-                              border: OutlineInputBorder(),
-                              labelText: 'タイトル',
-                              hintText: 'タイトルを入力してください',
+                                return null;
+                              },
+                              onSaved: (value) {
+                                setState(() {
+                                  _bookmarkItem['bookmarkBaseItems'][count]
+                                      ['url'] = value;
+                                });
+                              },
                             ),
-                            autovalidate: false,
-                            validator: (value) {
-                              if (value.isEmpty) {
-                                return 'タイトルを入力してください';
-                              }
+                            TextFormField(
+                              initialValue: bookmarkBaseItem['title'],
+                              decoration: const InputDecoration(
+                                icon: Icon(Icons.title),
+                                border: OutlineInputBorder(),
+                                labelText: 'タイトル',
+                                hintText: 'タイトルを入力してください',
+                              ),
+                              autovalidate: false,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'タイトルを入力してください';
+                                }
 
-                              return null;
-                            },
-                            onSaved: (value) {
-                              setState(() {
-                                _bookmarkItem['bookmarkBaseItems'][count]['title'] = value;
-                              });
-                            },
-                          ),
-                        ],
+                                return null;
+                              },
+                              onSaved: (value) {
+                                setState(() {
+                                  _bookmarkItem['bookmarkBaseItems'][count]
+                                      ['title'] = value;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    actions: [
-                      FlatButton(
-                        child: Text("save"),
-                        onPressed: () {
-                          // validate success
-                          if (_formKeyForDialog.currentState.validate()) {
-                            // 以下メソッド呼び出し後、onSavedが呼び出される
-                            _formKeyForDialog.currentState.save();
-                          }
-                          Navigator.pop(context);
-                        },
-                      )
-                    ],
-                  );
-                }
-              );
+                      actions: [
+                        FlatButton(
+                          child: Text("save"),
+                          onPressed: () {
+                            // validate success
+                            if (_formKeyForDialog.currentState.validate()) {
+                              // 以下メソッド呼び出し後、onSavedが呼び出される
+                              _formKeyForDialog.currentState.save();
+                            }
+                            Navigator.pop(context);
+                          },
+                        )
+                      ],
+                    );
+                  });
             } else {
               launch("${bookmarkBaseItem['url']}");
             }
@@ -324,9 +323,10 @@ class BookmarkViewerState extends State<BookmarkViewer> {
                 if (_formKey.currentState.validate()) {
                   // 以下メソッド呼び出し後、onSavedが呼び出される
                   _formKey.currentState.save();
-                  Firestore.instance.collection('bookmarks').document().setData(
-                    _bookmarkItem
-                  );
+                  Firestore.instance
+                      .collection('bookmarks')
+                      .document()
+                      .setData(_bookmarkItem);
                 }
               },
               child: Text('情報を登録する'),
