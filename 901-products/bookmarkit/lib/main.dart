@@ -19,6 +19,7 @@ class ItomakiwebApp extends StatelessWidget {
       home: ItomakiwebHomePage(title: 'Bookmarkit! List'),
       routes: {
         '/': (context) => ItomakiwebHomePage(title: 'Bookmarkit! List'),
+        '/bookmarks/': (context) => BookmarkHomePage(),
         '/bookmarks/new': (context) =>
             BookmarkNewPage(title: 'Bookmarkit! New'),
       },
@@ -41,6 +42,44 @@ class _ItomakiwebHomePageState extends State<ItomakiwebHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("/bookmarks/new");
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(4),
+                child: Icon(Icons.add),
+              ))
+        ],
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Expanded(
+              child: Row(
+                children: [
+                  FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed("/bookmarks/");
+                      },
+                      child: Text("Bookmark"))
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class BookmarkHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Bookmark List"),
         actions: [
           InkWell(
               onTap: () {
@@ -132,6 +171,7 @@ class BookmarkList extends StatelessWidget {
                   title: new Text(document['title']),
                   subtitle: new Text(document['titleShort']),
                   onTap: () {
+                    // TODO think about reload
                     var routeName = "/bookmarks/" + document.documentID;
                     Navigator.push(
                         context,
