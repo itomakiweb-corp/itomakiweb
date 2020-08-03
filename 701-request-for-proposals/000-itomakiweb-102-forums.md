@@ -6,7 +6,22 @@
     - http://www.pluto-dm.com/cgi/
 1. データ構造
 ```
-TODO
+// forums（firebase上で管理するかも？）
+{
+forumTitle: "ヴァルキリープロファイル",
+forumKey: "valkyrieProfile",
+}
+
+// forums/${forumName}/thread
+{
+threadTitle: "雑談",
+threadBody: "適当に雑談しましょう",
+}
+
+// forums/${forumName}/thread/${threadDocumentId}/messages
+{
+messageBody: "適当に雑談しましょう",
+}
 ```
 
 ### 仕様（実装に合わせて随時修正）
