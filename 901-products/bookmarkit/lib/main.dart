@@ -270,6 +270,29 @@ class BookmarkViewerState extends State<BookmarkViewer> {
                                 });
                               },
                             ),
+                            TextFormField(
+                              initialValue: bookmarkBaseItem['icon'],
+                              decoration: const InputDecoration(
+                                icon: Icon(Icons.bookmark),
+                                border: OutlineInputBorder(),
+                                labelText: 'アイコンURL',
+                                hintText: 'アイコンURLを入力してください',
+                              ),
+                              autovalidate: false,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'アイコンURLを入力してください';
+                                }
+
+                                return null;
+                              },
+                              onSaved: (value) {
+                                setState(() {
+                                  _bookmarkItem['bookmarkBaseItems'][count]
+                                      ['icon'] = value;
+                                });
+                              },
+                            ),
                           ],
                         ),
                       ),
